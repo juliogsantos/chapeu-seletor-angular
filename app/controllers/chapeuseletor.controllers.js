@@ -1,19 +1,17 @@
 angular.module('chapeuseletor')
 .controller('sorteioCtrl', function($scope, indiceAleatorioService, getNomesService){
-    //debug no console
-    //chamada ao serviço getNomes
-    let nomes = getNomesService.getListaNomesArquivoJson().then(function(data){
-        
-        console.log(data.data)
-        
-        //console.log(data.data.map((o) => o.nome))
-        //return data.data.map((o) => o.nome)
-        return data.data
-        }) 
-    //teste índice aleatório     
-    $scope.msg = indiceAleatorioService.sortear(4)
+    
+    $scope.lista = getNomesService.getListaNomesArquivoJson()
+    $scope.selecionados  = [ ]
+    console.log(Array.isArray($scope.lista))
+    
+    $scope.sorteio = function () {
+        if(Object.keys($scope.lista).length > 0){
 
-    //console.log(nomes.length)
-    let selecionados 
+        }
+    }
+   
+    $scope.msg = "ftfg"
+    console.log(indiceAleatorioService.sortear(1)) 
 }) 
   
