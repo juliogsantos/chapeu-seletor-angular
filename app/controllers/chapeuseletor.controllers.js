@@ -11,7 +11,7 @@ angular.module('chapeuseletor')
         }
     }
    
-    $scope.msg = "ftfg"
-    console.log(indiceAleatorioService.sortear(1)) 
+    $scope.msg = indiceAleatorioService.sortear(1)
+    console.log() 
 }) 
   
